@@ -1,0 +1,32 @@
+Login 
+
+URL: https://www.instagram.com/users/login
+Method: POST
+Status Code: 200 OK for pass & 401 Unauthorised for fail
+"Authentication: Basic Auth"
+path: /accounts/auth/login
+scheme: https
+content-type: application/json
+Accept: application/json
+
+request body - {
+
+  "username": "anand_nanwana14",
+  "password": "password123"
+}
+
+	
+response body (Pass) - {
+
+  "access_token": "sometoken",
+  "token_type": "Bearer",
+  "user_id": "anand_nanwana",
+  "message": "Login successful"
+}
+
+Response Body (Fail) - {
+
+  "error": "Invalid_Credentials",
+  "message": "Invalid username or password"
+}
+

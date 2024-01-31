@@ -1,0 +1,34 @@
+Sign-Up
+
+URL - https://www.instagram.com/users/signup/
+
+Method - POST
+
+Status Code - 200 Ok or 409 Conflict
+
+Request 
+Content-Type: application/json
+Accept: application/json
+
+Body - {
+
+  "username": "anand_nanwana14",
+  "email": "anand@gmail.com",
+  "password": "password123"
+}
+
+Response Body (pass) - {
+  "status": "success",
+  "message": "Account created successfully. Please verify email.",
+  "user": {
+    "id": "1234",
+    "username": "anand_nanwana14",
+    "email": "anand@gmail.com",
+  }
+}
+
+Response Body (fail) - {
+
+  "status": "failed",
+  "message": "email or username already exist",
+}  

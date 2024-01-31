@@ -1,0 +1,39 @@
+List Followers 
+
+URL - https://www.instagram.com/users/{userid}/followers/
+
+Method - Get 
+
+Status Code - 200 ok 
+path: /users/userid=anand/followers/
+scheme: https
+Authorization: Bearer your access token 
+
+
+Response 
+Message Body - {
+  "page": 1,
+  "per_page": 2,
+  "total": 12,
+  "total_pages": 6,
+  "followers": [
+    {
+      "username": "aniketsingh12",
+      "relationship": "following"
+    },
+    {
+      "username": "vishalsharma05",
+      "relationship": "following"
+    }
+    
+}
+
+"pagination": {
+    "next_page": "/usersuserid={userid}/followers?page=2",
+    "prev_page": null
+  }
+
+content-type: application/json
+// limit & skip
+// https://www.instagram.com/users/userid={userid}/followers?limit=10&skip=0
+
