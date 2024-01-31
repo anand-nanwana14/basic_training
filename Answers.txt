@@ -1,0 +1,83 @@
+#!/bin/bash
+# Date - 16-01-24
+# Author - Anand Nanwana 
+
+shopt -s expand_aliases # to export aliases we have to use this command
+source /etc/bash.bashrc
+
+cd ~
+mkdir sample
+cd sample
+touch sample.txt
+echo Hi! This is just a sample text file created using a shell script. >> sample.txt
+cat sample.txt
+grep -o 't' sample.txt | wc -l
+chmod 777 sample.txt
+echo Hi! This is just another sample text added to the file. >> sample.txt
+chmod g=r sample.txt
+chmod u=  sample.txt
+cp sample.txt sample2.txt
+
+# for loop to add random lines
+for i in {1..1000}; 
+do 
+        echo "hello I am Anand $i" >> ~/sample/sample.txt; 
+done
+
+head -n 50 sample.txt
+tail -n 50 sample.txt
+
+touch prog1.txt prog2.txt program.txt code.txt info.txt
+ls prog* 
+
+alias list='ls prog*'
+echo 'alias created' 
+list
+
+
+
+
+2. source & sh ?
+source
+- source is used to execute script within the current shell session.
+- changes persist after the script finishes.
+- source is for running in current shell environment with environment variables.
+- source script.sh or . script.sh
+
+sh
+- sh is command used to start a new shell session.
+- changes do not persist after the script finishes.
+- it runs as a standalone script.
+- ./script.sh or sh script.sh
+
+3. Write a command to get the difference between the contents in two files?
+- supposing a.txt and b.txt
+- contents of a.txt = hello world
+- contents of b.txt = hello world 
+			    this is anand here
+- we can use vimdiff command to check difference between contents of 2 files.
+
+4. What is the difference between ls and lsof?
+ls 
+- Ls is the command used to list files and directories in the directory.
+- there are many parameters that can be used like -a , -l ,etc
+
+lsof
+- lsof stands for list open files - we can list all open files on the basis of user -u, network -i, pid -p , etc
+- It is used to gather information about open files and processes on a Linux system.
+
+5. Create directories ./hello/world (World dir is inside hello dir) using mkdir command where neither hello or world exists. It should be a single command without the use of &&. 
+- We can use -p paramater here to create this type of directories 
+- -p is called parent directory 
+- mkdir -p ./hello/world 
+
+6. How can you permanently set an environment variable using a bash terminal?
+- With the use of export command we can set an environment variable directly 
+- echo "EXPORT variable=value" >> /.bashrc 
+- Or we can vi the bashrc config file and can do changes there.
+
+7. You have some process running on a port in your system. How can you view and then kill the process from the terminal?
+- we can use lsof command to view the process of specific port no. like
+- lsof -i :portno.
+- And then it can be kill by kill command 
+- kill pid - it will kill the process of the particular port 
