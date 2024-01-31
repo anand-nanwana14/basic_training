@@ -1,0 +1,20 @@
+1.Why git is one of the most popular VCS in the industry?
+- Git is a open source platform to use 
+- Git has reliable workflow 
+- It can work on any OS like macOs, linux, windows,etc.
+- Branching & merging makes git smooth & quick.
+
+
+
+2.What is Sha Hash?
+- It stands for secured hash algorithm.
+- Sha hash is a cryptographic method used to hash data & certificates.
+- sha-1(160 bits) is used in git, it is used to uniquely identify the commits, files & directories. 
+- The number in the (Ex.- SHA-256) indicates the length of bits.
+
+
+
+3.How git calculates differences? 
+- HEAD is a symbolic name that always points to the latest commit in the branch.
+- Git calculates the differences using a process called "diff". 
+- Once Git identify the difference between the two versions, it will generate a patch or diff file that show the changes.
