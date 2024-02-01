@@ -1,0 +1,22 @@
+Follow Request Accept 
+
+URL - https://www.instagram.com/users/{userid}/followers/requests
+Method - DELETE
+Status Code - 200 OK 
+Authorization: Bearer YOUR_ACCESS_TOKEN
+Content-Type: application/json
+Accept: application/json
+path: /users/{userid}/followers/requests
+
+Request Body - {
+
+  "username": "nikhil101",
+  "request": "Reject"
+}
+
+Response Body - {
+
+  "message": "Request rejected",
+  "username": "nikhil101",
+  "request": "rejected"
+}

@@ -1,0 +1,20 @@
+Log-out
+
+URL- https://www.instagram.com/users/logout
+
+Method- POST
+
+Status Code- 200 OK
+
+Authorization: Bearer your-access-token
+Content-Type: application/json
+Accept: application/json
+
+Request Body - {
+
+  "username": "anand_nanwana14"
+}
+
+Response body - {
+  "message": "Logout successful"
+}
